@@ -1,6 +1,7 @@
 import { FC, useState, MouseEvent } from 'react';
 import Link from 'next/link';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { IoMoon, IoSunny } from 'react-icons/io5'
 import { useTheme } from 'next-themes';
 
 const Nav: FC = () => {
@@ -47,13 +48,14 @@ const Nav: FC = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex">
           <span className="text-4xl m-4">Neal Grindstaff</span>
-          <div>
-            <Link href="/web">Web</Link>
-            <Link href="/photography">Photography</Link>
-            <Link href="/music">Music</Link>
+          <div className="flex items-center">
             <button onClick={toggleDarkMode} className="ml-4">
-              night
+              {theme === 'dark' ? <IoSunny /> : <IoMoon />}
             </button>
+            <Link className="mx-3 hover:bg-black/40" href="/web">Web</Link>
+            <Link className="mx-3 hover:bg-black/40" href="/photography">Photography</Link>
+            <Link className="mx-3 hover:bg-black/40" href="/music">Music</Link>
+            <Link href="/contact"></Link>
           </div>
         </div>
       </nav>

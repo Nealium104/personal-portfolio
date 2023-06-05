@@ -2,12 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: sans-serif;
+  }
+}
+
 /* Animations for ChangingText.js */
 .fade-enter {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1000ms, transform 1000ms;
-  transition-delay: 3000ms; 
+  transition-delay: 1000ms; 
   display: flex;
   align-items: center;
   justify-content: center;

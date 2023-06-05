@@ -1,3 +1,5 @@
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
@@ -7,13 +9,38 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    fontFamily: {
+      'montserrat': ['montserrat', ...fontFamily.sans],
+      'openSans' : ['openSans', ...fontFamily.sans],
+      'inconsolata' : ['inconsolata', ...fontFamily.sans],
+    },
     extend: {
-      backgroundImage: {
+      colors: {
+        primary: {
+          100: '#FFC107',
+          200: '#dda400',
+          300: '#916400',
+        },
+        accent: {
+          100: '#8BC34A',
+          200: '#286400',
+        },
+        text: {
+          100: '#FFFFFF',
+          200: '#e0e0e0',
+        },
+        bg: {
+          100: '#1B1B1B',
+          200: '#2a2a2a',
+          300: '#424242',
+        },
       },
     },
   },
   plugins: [],
 }
+
+
 // Dark
 // --primary-100:#FFC107;
 // --primary-200:#dda400;

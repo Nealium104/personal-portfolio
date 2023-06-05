@@ -1,3 +1,12 @@
+import Nav from "../Nav";
+import Footer from "../Footer";
+
 export default function MyComponent() {
-    return <div>Hello World</div>;
+    return (
+        <main>
+            <Nav />
+            <div>Hello World</div>;
+            <Footer />
+        </main>
+    )
 }

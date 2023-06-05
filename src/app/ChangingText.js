@@ -17,13 +17,13 @@ const ChangingText = () => {
   const handleBlur = () => {
     timerRef.current = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % roles.length);
-    }, 5000);
+    }, 8000);
   };
 
   useEffect(() => {
     timerRef.current = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % roles.length);
-    }, 5000); // Change every 5 seconds
+    }, 8000); // Change every 5 seconds
 
     return () => {
       clearInterval(timerRef.current); // Clear interval on component unmount

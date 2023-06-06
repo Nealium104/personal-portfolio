@@ -25,12 +25,12 @@ const ChangingText: React.FC = () => {
   useEffect(() => {
     timerRef.current = window.setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % roles.length);
-    }, 8000); // Change every 5 seconds
-
+    }, 8000); // Change every 8 seconds
+    
     return () => {
       if (timerRef.current) clearInterval(timerRef.current); // Clear interval on component unmount
     };
-  }, []);
+  }, [roles.length]);
 
   return (
     <span

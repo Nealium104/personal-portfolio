@@ -1,5 +1,3 @@
-'use client';
-
 import ChangingText from './ChangingText'
 import Nav from './Nav'
 import Footer from './Footer';

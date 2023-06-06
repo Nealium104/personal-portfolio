@@ -1,3 +1,5 @@
+'use client';
+
 import './globals.css'
 import { Montserrat, Open_Sans, Inconsolata } from 'next/font/google'
 import { Providers } from './providers'

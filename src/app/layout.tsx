@@ -1,3 +1,5 @@
+'use client'
+
 import './globals.css'
 import { Montserrat, Open_Sans, Inconsolata } from 'next/font/google'
 import { Providers } from './providers'
@@ -13,12 +15,6 @@ const openSans = Open_Sans({
 const inconsolata = Inconsolata({ 
   subsets: ['latin'],
   variable: '--inconsolata' })
-
-
-export const metadata = {
-  title: 'Portfolio',
-  description: 'Created by Neal Grindstaff',
-}
 
 export default function RootLayout({
   children,

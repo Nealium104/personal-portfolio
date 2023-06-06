@@ -3,32 +3,32 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
-const ChangingText = () => {
-  const [index, setIndex] = useState(0);
+const ChangingText: React.FC = () => {
+  const [index, setIndex] = useState<number>(0);
   const roles = ['Web Developer', 'Photographer', 'Musician']; // Roles to cycle through
 
   // Compute the maximum length role for defining width of the span
   const maxLengthRole = roles.reduce((a, b) => a.length > b.length ? a : b);
 
-  const timerRef = useRef();
+  const timerRef = useRef<number | undefined>();
 
   const handleFocus = () => {
-    clearInterval(timerRef.current);
+    if (timerRef.current) clearInterval(timerRef.current);
   };
 
   const handleBlur = () => {
-    timerRef.current = setInterval(() => {
+    timerRef.current = window.setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % roles.length);
     }, 8000);
   };
 
   useEffect(() => {
-    timerRef.current = setInterval(() => {
+    timerRef.current = window.setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % roles.length);
     }, 8000); // Change every 5 seconds
 
     return () => {
-      clearInterval(timerRef.current); // Clear interval on component unmount
+      if (timerRef.current) clearInterval(timerRef.current); // Clear interval on component unmount
     };
   }, []);
 

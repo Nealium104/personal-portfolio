@@ -28,7 +28,7 @@ const Nav: FC = () => {
             <GiHamburgerMenu />
           </button>
           <div className="flex flex-col">
-            <h2 className="text-3xl md:hidden">Neal Grindstaff</h2>
+            <h2 className="text-3xl md:hidden font-openSans">Neal Grindstaff</h2>
             <div className={mobileMenuOpen ? 'hidden' : 'visible'}>
               <div className="flex flex-col absolute bg-black/10">
                 <Link className="my-1 py-3 px-1 hover:bg-black/25" href="/web">

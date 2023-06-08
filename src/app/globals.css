@@ -9,37 +9,51 @@
 }
 
 /* Animations for ChangingText.js */
-.fade-enter {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1000ms, transform 1000ms;
-  transition-delay: 1000ms; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@keyframes fadeOutAndDown {
+  0% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
 }
 
-.fade-enter-active {
-  opacity: 1;
-  transform: translateY(0);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@keyframes fadeInAndUp {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
-.fade-exit {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 1000ms, transform 1000ms; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.fadeOutAndDown {
+  animation: fadeOutAndDown 1s ease-out forwards;
 }
 
-.fade-exit-active {
-  opacity: 0;
-  transform: translateY(20px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.fadeInAndUp {
+  animation: fadeInAndUp 1s ease-out forwards;
+}
+
+.rolesContainer {
+  position: relative;
+  height: 1.2em; /* adjust this value as necessary */
+  overflow: hidden;
+}
+
+.role {
+  position: absolute;
+  width: 100%;
+}
+
+.role.fadeOutDown {
+  animation-name: fadeOutDown;
+}
+
+.role.fadeInUp {
+  animation-name: fadeInUp;
 }

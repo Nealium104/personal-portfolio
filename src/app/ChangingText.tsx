@@ -1,56 +1,44 @@
-'use client';
+'use client'
 
-import React, { useState, useEffect, useRef } from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import React, { useState, useEffect } from 'react';
 
-const ChangingText: React.FC = () => {
+const RoleScroller: React.FC = () => {
   const [index, setIndex] = useState<number>(0);
-  const roles = ['Web Developer', 'Photographer', 'Musician']; // Roles to cycle through
+  const [fade, setFade] = useState<boolean>(false);
+  const [isInteracting, setIsInteracting] = useState<boolean>(false);
 
-  // Compute the maximum length role for defining width of the span
-  const maxLengthRole = roles.reduce((a, b) => a.length > b.length ? a : b);
-
-  const timerRef = useRef<number | undefined>();
-
-  const handleFocus = () => {
-    if (timerRef.current) clearInterval(timerRef.current);
-  };
-
-  const handleBlur = () => {
-    timerRef.current = window.setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % roles.length);
-    }, 8000);
-  };
+  const roles: string[] = ['Web Developer', 'Photographer', 'Musician'];
 
   useEffect(() => {
-    timerRef.current = window.setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % roles.length);
-    }, 8000); // Change every 8 seconds
-    
+    let timer: NodeJS.Timeout;
+    if (!isInteracting) {
+      timer = setInterval(() => {
+        setFade(true);
+        setTimeout(() => {
+          setIndex((index + 1) % roles.length);
+          setFade(false);
+        }, 1000);
+      }, 5000);
+    }
     return () => {
-      if (timerRef.current) clearInterval(timerRef.current); // Clear interval on component unmount
+      if (timer) clearInterval(timer);
     };
-  }, [roles.length]);
+  }, [index, isInteracting]);
 
   return (
-    <span
-      className="relative inline-block whitespace-nowrap"
-      style={{width: `${maxLengthRole.length}ch`}}
-      onFocus={handleFocus}
-      onBlur={handleBlur}
-      tabIndex={0} // Make it focusable
+    <div
+      tabIndex={0}
+      onMouseEnter={() => setIsInteracting(true)}
+      onMouseLeave={() => setIsInteracting(false)}
+      onFocus={() => setIsInteracting(true)}
+      onBlur={() => setIsInteracting(false)}
     >
-      <TransitionGroup component={null}>
-        <CSSTransition
-          key={roles[index]}
-          timeout={{ enter: 1000, exit: 1000 }}
-          classNames="fade"
-        >
-          <span className="absolute inline-block whitespace-nowrap">{roles[index]}</span>
-        </CSSTransition>
-      </TransitionGroup>
-    </span>
+      Neal Grindstaff | 
+      <div className={`role ${fade ? 'fadeOutAndDown' : 'fadeInAndUp'}`}>
+        {roles[index]}
+      </div>
+    </div>
   );
 };
 
-export default ChangingText;
+export default RoleScroller;

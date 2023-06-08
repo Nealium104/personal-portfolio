@@ -49,9 +49,9 @@ const Nav: FC = () => {
               </div>
             </div>
           </div>
-          <button onClick={toggleDarkMode} className="ml-4 text-3xl justify-self-end">
-              {theme === 'dark' ? <IoSunny /> : <IoMoon />}
-            </button>
+          <button onClick={toggleDarkMode} className="ml-4 text-3xl justify-self-end md:hidden">
+                {theme === 'dark' ? <IoSunny /> : <IoMoon />}
+              </button>
         </div>
         {/* Desktop Menu */}
         <div className="hidden md:flex md:justify-between">

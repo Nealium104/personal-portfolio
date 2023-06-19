@@ -31,19 +31,19 @@ const Nav: FC = () => {
             <Link href='/' className="text-3xl md:hidden font-openSans">Neal Grindstaff</Link>
             <div className={mobileMenuOpen ? 'hidden' : 'visible'}>
               <div className="flex flex-col absolute bg-black/75 p-4">
-                <Link className="my-1 py-3 px-1 hover:bg-black/25" href="/web">
+                <Link className="my-1 py-3 px-1 hover:bg-black/25" href="/web/">
                   Web
                 </Link>
                 <Link
                   className="my-1 py-3 px-1 hover:bg-black/25"
-                  href="/photography"
+                  href="/photography/"
                 >
                   Photography
                 </Link>
-                <Link className="my-1 py-3 px-1 hover:bg-black/25" href="/music">
+                <Link className="my-1 py-3 px-1 hover:bg-black/25" href="/music/">
                   Music
                 </Link>
-                <Link className="my-1 py-3 px-1 hover:bg-black/25" href="/contact">
+                <Link className="my-1 py-3 px-1 hover:bg-black/25" href="/contact/">
                   Contact
                 </Link>
               </div>
@@ -55,7 +55,7 @@ const Nav: FC = () => {
         </div>
         {/* Desktop Menu */}
         <div className="hidden md:flex md:justify-between">
-          <span className="text-4xl m-4">Neal Grindstaff</span>
+          <Link href='/' className="text-4xl m-4">Neal Grindstaff</Link>
           <div className="flex items-center">
             <button onClick={toggleDarkMode} className="ml-4">
               {theme === 'dark' ? <IoSunny /> : <IoMoon />}

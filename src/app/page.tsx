@@ -24,7 +24,7 @@ export default function Home() {
           </div>
         </div>
         <p className="text-justify-center font-montserrat text-3xl my-8 px-4">Hi, I&apos;m Neal. I&apos;m based in Lexington, KY. I&apos;m a software enginneer, photographer, and musician.</p>
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <section className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <div className="flex flex-col justify-between mx-10 h-full">
             <h2 className="text-5xl mt-8 mb-4 dark:text-primary-100">Web Developer</h2>
             <p> I craft digital experiences that merge design and functionality. I&apos;m passionate about creating responsive, user-friendly websites that are not only visually appealing but also deliver on performance. Through every line of code, I aim to connect with users, providing solutions that resonate on a global scale. For me, web development isn&apos;t just a job—it&apos;s an opportunity to innovate, inspire, and redefine online interaction.</p>

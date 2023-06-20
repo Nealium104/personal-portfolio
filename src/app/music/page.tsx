@@ -1,11 +1,11 @@
 import Nav from "../Nav";
 import Footer from "../Footer";
 
-export default function MyComponent() {
+export default function Music() {
     return (
         <main>
             <Nav />
-            <div>Hello World</div>;
+            <div>Hello music</div>
             <Footer />
         </main>
     )

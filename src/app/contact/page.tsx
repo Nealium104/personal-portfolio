@@ -1,11 +1,11 @@
 import Nav from "../Nav";
 import Footer from "../Footer";
 
-export default function MyComponent() {
+export default function Contact() {
     return (
         <main>
             <Nav />
-            <div>Hello World</div>;
+            <div>Hello Contact</div>
             <Footer />
         </main>
     )

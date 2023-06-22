@@ -26,16 +26,18 @@ const RoleScroller: React.FC = () => {
   }, [index, isInteracting]);
 
   return (
-    <div
-      tabIndex={0}
-      onMouseEnter={() => setIsInteracting(true)}
-      onMouseLeave={() => setIsInteracting(false)}
-      onFocus={() => setIsInteracting(true)}
-      onBlur={() => setIsInteracting(false)}
-    >
-      Neal Grindstaff | 
-      <div className={`role ${fade ? 'fadeOutAndDown' : 'fadeInAndUp'}`}>
-        {roles[index]}
+    <div className="">
+      <div
+        tabIndex={0}
+        onMouseEnter={() => setIsInteracting(true)}
+        onMouseLeave={() => setIsInteracting(false)}
+        onFocus={() => setIsInteracting(true)}
+        onBlur={() => setIsInteracting(false)}
+      >
+        Neal Grindstaff | 
+        <div className={`role ${fade ? 'fadeOutAndDown' : 'fadeInAndUp'}`}>
+          {roles[index]}
+        </div>
       </div>
     </div>
   );

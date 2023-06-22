@@ -10,18 +10,18 @@ export default function Home() {
     <>
       <Nav />
       <main className="p-10">
-        <div className="">
-        <div className=''>
-            <h1 className="">
-              <ChangingText />
-            </h1>
-          </div>
+        <div className="flex flex-col items-center justify-center">
           <Image
           className="rounded-full shadow-xl"
           src="https://res.cloudinary.com/dwbwyzsyp/image/upload/v1687395670/Portfolio/IMG_0307_rflqfz.jpg"
           alt="Neal with Seattle in the background"
           height={600}
           width={600} />
+          <div className='text-5xl my-8'>
+            <h1 className="">
+              <ChangingText />
+            </h1>
+          </div>
         </div>
         <p className="text-center font-montserrat text-3xl my-8 px-4">I&apos;m a software enginneer, photographer, and musician based in Lexington, KY.</p>
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-4">

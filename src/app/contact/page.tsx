@@ -5,7 +5,11 @@ export default function Contact() {
     return (
         <main>
             <Nav />
-            <div>Hello Contact</div>
+            <div className="flex flex-col justify-center items-center">
+                <h1 className="text-5xl">Hi there! 👋</h1>
+                <span className="text-xl">We're still under  construction at the moment. 👷‍♂️</span> 
+                <span className="text-xl">Feel free to reach out and discuss this site or anything else at any of the social media links below!</span>   
+            </div>
             <Footer />
         </main>
     )

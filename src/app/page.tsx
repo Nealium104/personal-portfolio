@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <main className="p-10">
+      <main className="p-10 overflow-x-hidden">
         <div className="flex flex-col items-center justify-center">
           <Image
           className="rounded-full shadow-xl"

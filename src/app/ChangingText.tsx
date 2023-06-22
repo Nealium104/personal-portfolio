@@ -34,7 +34,7 @@ const RoleScroller: React.FC = () => {
         onFocus={() => setIsInteracting(true)}
         onBlur={() => setIsInteracting(false)}
       >
-        Neal Grindstaff | 
+        Neal Grindstaff 
         <div className={`role ${fade ? 'fadeOutAndDown' : 'fadeInAndUp'}`}>
           {roles[index]}
         </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function MyComponent() {
     return (
-        <main>
+        <main className="overflow-x-hidden">
             <Nav />
             <div className="flex flex-col justify-center items-center">
                 <h1 className="text-5xl">Hi there! 👋</h1>

@@ -26,7 +26,7 @@ const RoleScroller: React.FC = () => {
   }, [index, isInteracting]);
 
   return (
-    <div className="">
+    <div className="overflow-x-hidden">
       <div
         tabIndex={0}
         onMouseEnter={() => setIsInteracting(true)}

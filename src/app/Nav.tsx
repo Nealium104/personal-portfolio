@@ -21,7 +21,7 @@ const Nav: FC = () => {
 
   return (
     <>
-      <nav className="bg-black/25">
+      <nav className="bg-black/25 overflow-x-hidden">
         {/* Mobile Menu */}
         <div className="flex items-center">
           <button onClick={toggleMobileMenu} className="md:hidden text-5xl p-5">
@@ -60,9 +60,9 @@ const Nav: FC = () => {
             <button onClick={toggleDarkMode} className="ml-4">
               {theme === 'dark' ? <IoSunny /> : <IoMoon />}
             </button>
-            <Link className="mx-3 light:text-black hover:bg-black/40" href="/web">Web</Link>
-            <Link className="mx-3 light:text-black hover:bg-black/40" href="/photography">Photography</Link>
-            <Link className="mx-3 light:text-black hover:bg-black/40" href="/music">Music</Link>
+            <Link className="px-3 light:text-black hover:bg-black/40" href="/web">Web</Link>
+            <Link className="px-3 light:text-black hover:bg-black/40" href="/photography">Photography</Link>
+            <Link className="px-3 light:text-black hover:bg-black/40" href="/music">Music</Link>
             <Link href="/contact"></Link>
           </div>
         </div>

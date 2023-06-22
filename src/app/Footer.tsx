@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Footer () {
     return (
-        <footer className="border-t-2">
+        <footer className="border-t-2 overflow-x-hidden">
             <span className='block text-center mt-4'>©2023 Neal Grindstaff</span>
             <div className="flex flex-col items-center justify-between">
                 <div>

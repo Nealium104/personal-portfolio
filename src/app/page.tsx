@@ -17,7 +17,7 @@ export default function Home() {
           alt="Neal with Seattle in the background"
           height={600}
           width={600} />
-          <div className='text-5xl my-8'>
+          <div className='text-5xl mt-4'>
             <h1 className="">
               <ChangingText />
             </h1>

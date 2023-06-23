@@ -41,7 +41,7 @@
 
 .rolesContainer {
   position: relative;
-  height: 1.2em; /* adjust this value as necessary */
+  height: 3em; /* adjust this value as necessary */
   overflow: hidden;
 }
 

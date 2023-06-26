@@ -23,8 +23,8 @@ const Nav: FC = () => {
     <>
       <nav className="bg-black/25 overflow-x-hidden">
         {/* Mobile Menu */}
-        <div className="flex items-center">
-          <button onClick={toggleMobileMenu} className="md:hidden text-5xl p-5">
+        <div className="flex items-center justify-evenly">
+          <button onClick={toggleMobileMenu} className="md:hidden text-4xl p-5">
             <GiHamburgerMenu />
           </button>
           <div className="flex flex-col">
@@ -49,9 +49,9 @@ const Nav: FC = () => {
               </div>
             </div>
           </div>
-          <button onClick={toggleDarkMode} className="ml-4 text-3xl justify-self-end md:hidden">
+          <button onClick={toggleDarkMode} className="ml-4 text-3xl md:hidden">
                 {theme === 'dark' ? <IoSunny /> : <IoMoon />}
-              </button>
+          </button>
         </div>
         {/* Desktop Menu */}
         <div className="hidden md:flex md:justify-between">

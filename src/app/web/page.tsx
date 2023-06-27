@@ -23,6 +23,7 @@ export default function MyComponent() {
                         title="Collins Trumpet"
                         tech="Next.js, HTML, CSS, JavaScript, Tailwind, React, Browser and External API's"
                         description="A portfolio and contact page for a sought after trumpet player"
+                        page="/web/collins"
                         />
                     </div>
                     <div>
@@ -33,6 +34,7 @@ export default function MyComponent() {
                         title="Gig-Econ"
                         tech="Next.js, HTML, CSS, JavaScript, Tailwind, React, MongoDB, NoSQL"
                         description="A money tracker for cash only workers"
+                        page="/web/gig"
                         />
                     </div>
                     <div>
@@ -43,6 +45,7 @@ export default function MyComponent() {
                         title="Skunch (in progress)"
                         tech="Next.js, HTML, CSS, JavaScript, Tailwind, React, agile, scrum"
                         description="A homepage and blog for a Lexington based rock band"
+                        page="/web/skunch"
                         />
                     </div>
                     <div>
@@ -53,6 +56,7 @@ export default function MyComponent() {
                         title="Kashmere (in progress)"
                         tech="Next.js, HTML, CSS, JavaScript, Tailwind"
                         description="Wilmore based rock band EPK"
+                        page="/web/kashmere"
                         />
                     </div>
                 </section>
